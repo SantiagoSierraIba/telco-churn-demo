@@ -1,0 +1,25 @@
+[project]
+name = "telco-churn-predictions"
+version = "0.1.0"
+description = "Predicting churn in a telco"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "joblib>=1.6.0",
+    "marimo>=0.25.2",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.ruff.lint]
+# Ruff's default rules flag two things that marimo writes on purpose: the bare
+# `return` at the end of a cell (PLR1711) and a cell's last line, which marimo
+# displays (B018).
+# Azure's HTTP trigger template calls `logging.info(...)` directly (LOG015), so
+# that check is off as well.
+ignore = ["PLR1711", "B018", "LOG015"]
