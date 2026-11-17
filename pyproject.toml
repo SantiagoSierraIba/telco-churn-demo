@@ -6,15 +6,20 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "azure-functions>=1.26.0",
+    "fastapi>=0.163.1",
     "joblib>=1.6.0",
     "marimo>=0.25.2",
     "pandas>=3.1.0",
+    "requests>=2.34.2",
     "scikit-learn>=1.9.1",
+    "streamlit>=1.67.0",
+    "uvicorn>=0.54.0",
 ]
 
 [dependency-groups]
 dev = [
     "pytest>=9.2.0",
+    "zensical>=0.1.1",
 ]
 
 [tool.ruff.lint]
